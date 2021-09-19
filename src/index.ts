@@ -46,6 +46,8 @@ export async function login(username: string, password: string, existingMfaToken
   let ajaxKey: string;
   let loginFormBody: string, identities: { data: any; }, systems: any;
 
+  console.log("testing...............");
+  
   // load initial alarm.com page to gather required hidden form fields
   await get(ADCLOGIN_URL)
     .then(res => {
